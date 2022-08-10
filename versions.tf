@@ -1,12 +1,12 @@
 terraform {
 
-  cloud {
-    organization = "hashicorp-learn"
+  # cloud {
+  #   organization = "pranab_test_org"
 
-    workspaces {
-      name = "learn-terraform-cloud"
-    }
-  }
+  #   workspaces {
+  #     name = "pranab-Workspace"
+  #   }
+  # }
 
   required_providers {
     aws = {

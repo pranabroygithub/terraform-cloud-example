@@ -3,13 +3,23 @@ variable "region" {
   default     = "us-west-1"
 }
 
-variable "instance_type" {
-  description = "Type of EC2 instance to provision"
-  default     = "t2.micro"
+variable "vpc_cidr_block" {
+    type = string
+    description = "it is the IPv4 CIDR block for the VPC"
+    default = "10.35.0.0/24"
 }
 
-variable "instance_name" {
-  description = "EC2 instance name"
-  default     = "Provisioned by Terraform"
+variable "vpc_tag" {
+    description = "vpc tag to be attached"
+    type = object({
+        Name = string
+    })
+    default = {
+      Name = "pranab-test"
+    }
 }
 
+variable "instance_tenancy" {
+    type = string
+    default = "default"
+}
