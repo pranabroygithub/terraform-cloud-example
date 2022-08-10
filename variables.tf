@@ -15,7 +15,7 @@ variable "vpc_tag" {
         Name = string
     })
     default = {
-      Name = "pranab-test"
+      Name = "pranab-test-terraform-cloud"
     }
 }
 
